@@ -22,7 +22,6 @@ const PrevideoScreen = ({ onNext, url }) => {
     >
       <DevButton onClick={onNext} />
 
-      <div>{t('Watch the video to continue to the next step.')}</div>
       <Whitespace height={16} />
       <Video
         url={url}
@@ -43,13 +42,13 @@ const PrevideoScreen = ({ onNext, url }) => {
             bottom: 0,
           }}
         >
-          {t('Continue')}
+          {t('Verder')}
           <Whitespace width={8} />
           <ArrowForward style={{ transform: 'translateY(1px)' }} />
         </button>
       ) : is_timeout ? (
         <button style={{ position: 'absolute', bottom: 0 }} onClick={onNext}>
-          {t('Skip video')}
+          {t('Verder')}
         </button>
       ) : null}
     </div>

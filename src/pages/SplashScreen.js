@@ -27,7 +27,7 @@ const SplashScreen = () => {
           marginRight: 16,
         }}
       >
-        <h2>{t('James Bond')}</h2>
+        <h2>{t('JTI Game')}</h2>
       </div>
       <img
         // @ts-ignore
@@ -76,7 +76,7 @@ const SplashScreen = () => {
             navigate('play' + window.location.search);
           }}
         >
-          {t('Enter')}
+          {t('.')}
         </button>
       </div>
     </div>

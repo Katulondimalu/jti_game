@@ -4,7 +4,7 @@ export const DEVELOPMENT_PARK_NAME = 'dev-park';
 
 export const PRODUCTION_PARK_NAME = 'arena';
 
-export const SKIP_VIDEO_TIMEOUT = 10 * 1000;
+export const SKIP_VIDEO_TIMEOUT = 0 * 1000;
 
 export const ENVIRONMENT = process.env.REACT_APP_MODE;
 

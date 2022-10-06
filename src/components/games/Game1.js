@@ -31,39 +31,9 @@ const Game1 = ({ onNext }) => {
         ref={previous_media_dialog}
         url={t('game1VideoUrl')}
       />
-
-      <HintsDialog
-        ref={dialog_1}
-        hints={[
-          {
-            bought: room?.bought_hints?.hint_1a,
-            penalty_minutes: 1,
-            onBuy: () => {
-              set(child(room_ref, 'bought_hints/hint_1a'), true);
-            },
-            text: t('hintText_1a'),
-          },
-          {
-            bought: room?.bought_hints?.hint_1b,
-            penalty_minutes: 3,
-            onBuy: () => {
-              set(child(room_ref, 'bought_hints/hint_1b'), true);
-            },
-            text: t('hintText_1b'),
-          },
-          {
-            bought: room?.bought_hints?.hint_1c,
-            penalty_minutes: 10,
-            onBuy: () => {
-              set(child(room_ref, 'bought_hints/hint_1c'), true);
-            },
-            text: t('hintText_1c'),
-          },
-        ]}
-      />
-      
+ 
       <div style={{textAlign: 'center'}}>{t('game1ClueText')}</div>
-      <BarcodeScanner codes={['1397', '11283']} onNext={onNext} />
+      <BarcodeScanner codes={['1234', 'expinc']} onNext={onNext} />
 
       <div
         style={{
@@ -76,18 +46,6 @@ const Game1 = ({ onNext }) => {
           marginTop: '1rem',
         }}
       >
-        <button
-          className='outline'
-          onClick={() => {
-            previous_media_dialog.current.showModal();
-          }}
-        >
-          {t('Video')}
-        </button>
-        <div style={{ width: 16 }} />
-        <button onClick={() => dialog_1.current.showModal()}>
-          {t('Hints')}
-        </button>
       </div>
     </div>
   );
